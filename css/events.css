@@ -1,0 +1,129 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+	--primary-color: #ffd700;
+	--secondary-color: #0f212b;
+	--accent-color: #3498db;
+}
+
+body {
+	background-color: #f8f9fa;
+}
+/* Style for the logo */
+.navbar-brand img {
+	max-height: 50px; /* Restrict the height for a consistent size */
+	width: auto; /* Maintain the aspect ratio */
+	transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+/* Hover effect */
+.navbar-brand img:hover {
+	transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+.navbar {
+	display: flex;
+	align-items: center; /* Vertically align items */
+}
+
+.navbar-brand {
+	margin-right: auto; /* Push other items to the right */
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+	.navbar-brand img {
+		max-height: 40px; /* Slightly smaller logo for mobile devices */
+	}
+}
+.navbar {
+	background: rgba(255, 255, 255, 0.95) !important;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+h2.hedaerTopic {
+	font-family: "Inter", serif !important;
+	position: relative;
+}
+h2.hedaerTopic::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	background-color: #ffdc39;
+	width: 100%;
+	height: 0.5em;
+	z-index: -1;
+}
+.filter-btn.active {
+	position: relative;
+	background-color: #ffd700 !important;
+	color: black !important;
+	border-color: #ffd700 !important;
+}
+.filter-btn:focus {
+    outline: none !important;
+    box-shadow: none !important; /* Removes Bootstrap-specific focus shadows */
+}
+.filter-btn.active:hover {
+	color: #ffd700 !important;
+	transition: all 0.5s;
+	border: 1px solid #ffd700 !important;
+	background-color: transparent !important;
+}
+.btn-outline-dark {
+	position: relative;
+	transition: all 0.5s;
+
+	border: 1px solid #ffd700 !important;
+}
+.btn-outline-dark:hover {
+	background-color: #ffd700 !important;
+	border: 1px solid #ffd700 !important ;
+}
+.event-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.event-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-category {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 8px 15px;
+	border-radius: 20px;
+	font-weight: 600;
+	z-index: 1;
+}
+
+.event-image {
+	height: 250px;
+	object-fit: cover;
+}
+
+.event-date {
+	width: 80px;
+	height: 80px;
+	background: var(--primary-color);
+	color: white;
+	border-radius: 10px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	z-index: 1;
+}
+
+.navbar {
+	background: rgba(255, 255, 255, 0.95) !important;
+	backdrop-filter: blur(10px);
+}

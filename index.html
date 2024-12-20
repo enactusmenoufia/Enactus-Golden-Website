@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enactus Menofia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Fade-Up Animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo Image -->
+            <a class="navbar-brand fw-bold fade-up delay-1" href="#">
+                <img src="imgs/Sec HPNGs - .png" alt="Enactus Menofia" id="logo">
+            </a>
+            <button class="navbar-toggler collapse-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item fade-up delay-1"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item fade-up delay-2"><a class="nav-link" href="#aboutEnactusMenofia">About</a></li>
+                    <li class="nav-item fade-up delay-2"><a class="nav-link" href="#"
+                            onclick="window.location='teamBoard.html'">Team Board</a></li>
+                    <li class="nav-item fade-up delay-3"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item fade-up delay-3"><a class="nav-link" href="#events"
+                            onclick="window.location='events.html'">Events</a></li>
+                    <li class="nav-item fade-up delay-4"><a class="nav-link" href="#join">Best Members</a></li>
+                    <li class="nav-item fade-up delay-4"><a class="nav-link" href="#contact" onclick="window.location='contactUs.html'">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center">
+            <h1 class="display-3 fw-bold mb-3 fade-up delay-1">Enactus Menofia</h1>
+            <h2 class="typed-heading fade-up delay-2">
+                <span id="typed-text"></span>
+            </h2>
+            <a href="#join" class="btn contact-btn fw-bold fade-up delay-3"
+                onclick="window.location='contactUs.html'">Contact Us</a>
+        </div>
+    </section>
+    <section class="whatWeDo position-relative">
+        <div class="container position-relative">
+            <div class="headerDesc">
+                <h2 class="text-center my-5 fade-up delay-1">What is <span class="enactus">Enactus</span></h2>
+            </div>
+            <div class="row align-items-center mx-auto ">
+                <div class="col-md-6 text-content">
+                    <div>
+                        <h3>
+                            <span class="Entrepreneurial">En</span>trepreneurial
+                        </h3>
+                        <p>
+                            Having the perspective to see an opportunity and the talent to create value <br>from that
+                            opportunity.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            <span class="action">Act</span>ion
+                        </h3>
+                        <p>
+                            The willingness to do something and the commitment to see it through even <br>when the
+                            outcome
+                            is not guaranteed.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="us">Us</h3>
+                        <p>
+                            We work together to achieve sustainable development goals by combining entrepreneurial ideas
+                            with action.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 about-Img d-flex align-items-center">
+                    <img src="imgs/IMG-20241203-WA0216.jpg" alt="Enactus" class="styled-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="aboutEnactusMenofia" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title aboutEnactus fade-up">About Enactus Menofia</h2>
+            <p class="about-Enactus-Menofia fade-up delay-1">
+                <strong>Enactus Menofia</strong> is a student-led organization at Menofia University dedicated to
+                creating
+                positive <strong>social</strong>, <strong>environmental</strong>, and <strong>economic</strong> impact
+                through entrepreneurial projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section id="vision" class="vision-mission">
+        <div class="container">
+            <h2 class="section-title section-titleVsMs display-5 text-center mb-5 fade-up">Vision & Mission</h2>
+            <div class="row align-items-center">
+                <!-- Vision -->
+                <div class="col-lg-6 mb-4 text-center text-lg-start fade-up delay-1">
+                    <div class="content-box shadow p-4 text-center">
+                        <h3 class="fw-bold title-VsMs mb-3">Our Vision</h3>
+                        <p>
+                            To inspire and empower students and communities by fostering innovative, sustainable
+                            solutions.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mission -->
+                <div class="col-lg-6 mb-4 text-center text-lg-start fade-up delay-2">
+                    <div class="content-box content-box-mission shadow p-4">
+                        <h3 class="fw-bold title-VsMs mb-3 text-center">Our Mission</h3>
+                        <p>
+                            To engage and empower students in collaborative efforts to develop sustainable solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section
+    <section id="projects" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title display-5 fade-up">Our Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up delay-1">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning fw-bold">Project Title 1</h5>
+                            <p class="card-text">A short description of the project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up delay-2">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning fw-bold">Project Title 2</h5>
+                            <p class="card-text">A short description of the project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up delay-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning fw-bold">Project Title 3</h5>
+                            <p class="card-text">A short description of the project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Enactus Menofia. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!--
+************************ D e v e l o p e d   b y   G B O Y ********************
+                   *   _____ ____   ______     __*
+                   *  / ____|  _ \ / __ \ \   / /*
+                   * | |  __| |_) | |  | \ \_/ / *
+                   * | | |_ |  _ <| |  | |\   /  *
+                   * | |__| | |_) | |__| | | |   *
+                   *  \_____|____/ \____/  |_|   * 
+********************************************************************************
+*-->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeUpElements = document.querySelectorAll(".fade-up");
+
+            const handleScroll = () => {
+                fadeUpElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        el.classList.add("visible");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll(); // Trigger on page load
+
+            new Typed("#typed-text", {
+                strings: ["Empowering Students.", "Transforming Lives.", "Innovating for a Better World."],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true,
+                smartBackspace: true,
+            });
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

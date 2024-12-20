@@ -1,0 +1,415 @@
+/**
+ * Default Navbar Style
+ *
+ * @format
+ */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+	scroll-behavior: unset;
+}
+#navbar {
+	background-color: transparent; /* Default Yellow */
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navbar .nav-link {
+	color: white; /* No need for !important */
+	position: relative;
+	transition: 0.5s color;
+	font-family: "Raleway", serif;
+}
+
+#navbar .nav-link:hover {
+	color: #ffd700; /* Gold color on hover */
+	transition: 0.5s color;
+}
+
+/* Navbar Style on Scroll */
+#navbar.scrolled {
+	background-color: #0f212b; /* Inverted Color - Dark Background */
+}
+
+/* Navbar Links - Adjusting Colors on Scroll */
+#navbar.scrolled .nav-link {
+	position: relative;
+	transition: all 0.5s;
+}
+
+#navbar.scrolled .nav-link:hover {
+	color: #ffd700 !important;
+}
+
+#logo {
+	max-height: 50px;
+	transition: transform 0.3s ease;
+}
+
+#logo {
+	max-height: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+	position: relative;
+	background: url("../imgs/Adventus.jpg") no-repeat center center/cover;
+	color: #fff;
+	padding: 150px 20px;
+	text-align: center;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	/* Black overlay with transparency */
+}
+
+.hero-content {
+	position: relative;
+	z-index: 1;
+}
+
+.hero-section {
+	position: relative;
+	height: 100vh;
+	background: url("../imgs/Adventus.jpg") center/cover no-repeat;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-attachment:fixed ;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+	z-index: 1;
+}
+.contact-btn {
+	padding: 10px 20px;
+	border: 2px solid transparent;
+	background-color: #ffd700;
+	position: relative;
+	transition: all 0.5s;
+	border-radius: 2.05% !important;
+}
+.contact-btn:hover {
+	border: 2px solid #ffd700 !important;
+	background-color: transparent !important;
+	color: #ffd700 !important;
+}
+
+.hero-content {
+	z-index: 2;
+}
+
+.display-3 {
+	font-size: 3rem; /* Adjust size for "Enactus Menofia" */
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.typed-heading {
+	font-size: 1.5rem; /* Make Typed.js text smaller */
+	font-weight: 400;
+	color: #ffd700;
+	margin-bottom: 1.5rem;
+}
+
+#typed-text {
+	border-right: 2px solid #ffd700; /* Cursor effect */
+	padding-right: 5px;
+}
+
+.section-title {
+	color: black;
+	margin-bottom: 20px;
+	z-index: 1;
+}
+#aboutEnactusMenofia {
+	background-color: rgb(248 249 250) !important;
+}
+.aboutEnactus {
+	position: relative;
+}
+.aboutEnactus::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	background-color: #ffdc39;
+	width: 100%;
+	height: 0.5em;
+	z-index: -1;
+}
+.whatWeDo {
+	display: flex; /* Use flexbox for side-by-side layout */
+	align-items: center; /* Vertically align content */
+	justify-content: space-between; /* Ensure equal space between text and image */
+	padding: 3rem 1rem;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0.8)
+	);
+}
+
+.text-content {
+	height: 100%;
+	width: 50%; /* Take 50% of the space */
+	padding: 2rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	background: rgba(
+		255,
+		255,
+		255,
+		0.9
+	); /* Subtle background for better readability */
+}
+
+.about-Img {
+	width: 50%; /* Take 50% of the space */
+	text-align: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.styled-img {
+	width: 100%; /* Full width of the container */
+	height: auto; /* Maintain aspect ratio */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	font-weight: bold;
+	color: #333;
+}
+
+h3 {
+	font-size: 1.8rem;
+	color: #222;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #555;
+}
+
+@media (max-width: 768px) {
+	.whatWeDo {
+		flex-direction: column; /* Stack content vertically for smaller screens */
+	}
+
+	.text-content,
+	.about-Img {
+		width: 100%; /* Full width for mobile */
+	}
+}
+
+.enactus {
+	position: relative;
+	z-index: 99;
+}
+.enactus::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	background-color: #ffdc39;
+	width: 100%;
+	height: 0.5em;
+	z-index: -1;
+}
+.Entrepreneurial,
+.action,
+.us {
+	color: #ffdc39;
+	z-index: 99;
+	font-weight: bold;
+}
+/* Responsive adjustments */
+
+footer {
+	background-color: #f1f1f1;
+	padding: 10px 0;
+	margin-top: 20px;
+}
+
+footer p {
+	color: white;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.vision-mission {
+	padding: 4rem 1rem;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #333;
+}
+
+.content-box {
+	border: 2px solid #ddd; /* Consistent border size */
+	padding: 2rem !important;
+	height: 100%; /* Ensure equal height for both boxes */
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.content-box-mission {
+	border: 2px solid #ddd;
+	padding: 2rem !important;
+	height: 100%; /* Ensure equal height for both boxes */
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.content-box:hover {
+	transform: scale(1.05); /* Slight size increase */
+	border-color: #ffcc00; /* Highlight border color */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Elevate shadow on hover */
+}
+
+.title-VsMs {
+	font-size: 1.8rem;
+	color: black !important;
+	transition: color 0.3s ease; /* Smooth transition for title color */
+}
+
+.content-box:hover .title-VsMs {
+	color: #ffcc00 !important; /* Yellow title on hover */
+}
+.section-titleVsMs {
+	position: relative;
+}
+
+.section-titleVsMs::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	display: block;
+	background-color: #ffdc39;
+	width: 25%;
+	height: 0.5em;
+	z-index: -1;
+}
+
+p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+	.vision-mission {
+		padding: 2rem 1rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.title {
+		font-size: 1.6rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 768px) {
+	.section-titleVsMs::after {
+		width: 50%; /* Adjust width for smaller screens */
+	}
+}
+
+@media (max-width: 576px) {
+	.section-titleVsMs::after {
+		width: 77%; /* Further adjust width for very small screens */
+	}
+}
+@media (max-width: 768px) {
+	.text-content {
+		margin-bottom: 2rem; /* Space between text and image for mobile */
+		padding: 1.5rem; /* Adjust padding for smaller screens */
+	}
+
+	.styled-img {
+		transform: translateX(0); /* Centers the image on mobile */
+		max-width: 100%; /* Full-width image on mobile */
+		margin-bottom: 1.5rem;
+	}
+
+	.row {
+		flex-direction: column; /* Stacks text and image vertically */
+	}
+
+	.about-Img {
+		margin-top: 1.5rem; /* Adds spacing for smaller screens */
+	}
+}
+
+@media (min-width: 768px) {
+	.row {
+		flex-wrap: nowrap; /* Prevents stacking on larger screens */
+	}
+
+	.about-Img {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	.styled-img {
+		margin-top: 88px;
+		max-width: 107%; /* Keeps image proportional to layout */
+		height: auto;
+	}
+}
+
+@media (max-width: 991px) {
+	#navbarNav {
+		justify-content: center;
+		text-align: center;
+		width: 100vw;
+		background-color: white;
+		position: fixed;
+		top: 60px;
+		left: 0;
+		z-index: 10000;
+	}
+
+	#navbarNav .nav-link {
+		color: black;
+		border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
+	}
+
+	#navbarNav .nav-item:hover .nav-link {
+		color: #ffd700;
+	}
+
+	.navbar-toggler {
+		border-color: white;
+	}
+
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	}
+}
