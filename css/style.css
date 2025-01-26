@@ -44,7 +44,8 @@ html {
 }
 .hero-section {
 	position: relative;
-	background: url("../imgs/Hore.jpg") no-repeat center center/cover;
+	background: url("https://i.postimg.cc/1tFz0h1t/Hore.jpg") no-repeat center
+		center/cover;
 	color: #fff;
 	padding: 150px 20px;
 	text-align: center;
@@ -930,7 +931,6 @@ footer p {
 		left: -10px;
 	}
 }
-
 
 @media (min-width: 768px) {
 	.aboutEnactus::after {
