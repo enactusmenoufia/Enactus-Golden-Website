@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Enactus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/subMain.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg enactus-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/Main HPNGs - .png" alt="Enactus Logo">
+            </a>
+        </div>
+    </nav>
+    <!--
+****************** D e v e l o p e d   b y   G B O Y ********************
+                   *   _____ ____   ______     __ *
+                   *  / ____|  _ \ / __ \ \   / / *
+                   * | |  __| |_) | |  | \ \_/ /  *
+                   * | | |_ |  _ <| |  | |\   /   *
+                   * | |__| | |_) | |__| | | |    *
+                   *  \_____|____/ \____/  |_|    * 
+********************************************************************************
+*-->
+    <!-- Contact Section -->
+    <section class="contact-section my-5">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            <div class="row align-items-center">
+                <!-- Contact Form -->
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-bold sendMsg">Send Us a Message</h4>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control custom-input" id="name" name="Name"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control custom-input" id="email" name="Email"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control custom-input" id="message" name="Message" rows="4"
+                                placeholder="Write your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-enactus" id="submitBtn">Send Message</button>
+                    </form>
+                    <div id="notification" class="alert mt-3" role="alert" style="display: none;"></div>
+                </div>
+
+                <!-- Contact Illustration -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="icon-container">
+                        <img src="imgs/Main HPNGs - .png" alt="Enactus Logo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-3 text-center bottom-0">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Enactus Menofia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

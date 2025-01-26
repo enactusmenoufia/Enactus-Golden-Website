@@ -1,0 +1,184 @@
+/** @format */
+
+:root {
+	--primary-color: #ffd700;
+	--secondary-color: #2c3e50;
+	--accent-color: #3498db;
+}
+
+body {
+	background-color: #f8f9fa;
+}
+/* Style for the logo */
+.navbar-brand img {
+	max-height: 50px; /* Restrict the height for a consistent size */
+	width: auto; /* Maintain the aspect ratio */
+	transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+/* Hover effect */
+.navbar-brand img:hover {
+	transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+.navbar {
+	display: flex;
+	align-items: center; /* Vertically align items */
+}
+
+.navbar-brand {
+	margin-right: auto; /* Push other items to the right */
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+	.navbar-brand img {
+		max-height: 40px; /* Slightly smaller logo for mobile devices */
+	}
+}
+.navbar {
+	background: rgba(255, 255, 255, 0.95) !important;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-header {
+	padding: 100px 0 50px;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.team-header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("https://i.postimg.cc/d1gwx76j/Adventus.jpg") center/cover;
+	background-attachment: fixed;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.headerParagraph {
+	color: white !important;
+}
+
+.team-category {
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.category-title {
+	display: inline-block;
+	color: var(--secondary-color);
+	padding: 10px 30px;
+	border-radius: 30px;
+	transform: translateY(20px);
+	font-weight: bold;
+}
+.category-title::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 8px;
+	display: block;
+	background-color: var(--primary-color);
+	width: 100%;
+	height: 0.5em;
+	z-index: -1;
+}
+
+.team-member-card {
+	background: white;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	height: 100%;
+	position: relative;
+}
+
+.team-member-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.member-image {
+	position: relative;
+	padding-top: 100%;
+	overflow: hidden;
+}
+
+.member-image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+.team-member-card:hover .member-image img {
+	transform: scale(1.1);
+}
+
+.member-info {
+	padding: 20px;
+	position: relative;
+}
+
+.member-role {
+	color: var(--secondary-color);
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+}
+
+.social-links {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	gap: 10px;
+}
+
+.social-link {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #f8f9fa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--secondary-color);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.social-link:hover {
+	background: var(--secondary-color);
+	color: white;
+	transform: translateY(-3px);
+}
+
+.quote-badge {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: var(--secondary-color);
+	color: white;
+	padding: 5px 15px;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	z-index: 1;
+}
+
+@media (max-width: 768px) {
+	.team-member-card {
+		margin-bottom: 10px;
+	}
+}

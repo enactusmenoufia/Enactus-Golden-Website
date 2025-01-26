@@ -1,0 +1,337 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+	background: linear-gradient(135deg, #0f212b 0%, #16213e 100%);
+	color: #fff;
+	min-height: 100vh;
+	font-family: "Raleway", serif;
+}
+/* Navbar styles */
+.navbar {
+	display: flex;
+	align-items: center; /* Vertically align items */
+	margin-bottom: 20px;
+	background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+	backdrop-filter: blur(10px); /* Apply blur effect */
+	-webkit-backdrop-filter: blur(10px); /* For Safari support */
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for distinction */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1030;
+}
+
+/* Logo styles */
+.navbar-brand img {
+	max-height: 50px; /* Restrict the height for consistent size */
+	width: auto; /* Maintain the aspect ratio */
+	transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+/* Hover effect for the logo */
+.navbar-brand img:hover {
+	transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Push other navbar items to the right */
+.navbar-brand {
+	margin-right: auto;
+}
+
+/* Navbar link styles */
+.navbar .nav-link {
+	color: #000; /* Set default text color for visibility */
+	text-decoration: none;
+	padding: 8px 15px; /* Add spacing around links */
+	transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar .nav-link:hover {
+	color: #007bff; /* Optional: Set hover color */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+	.navbar-brand img {
+		max-height: 40px; /* Slightly smaller logo for mobile devices */
+	}
+	.navbar .nav-link {
+		padding: 6px 10px; /* Adjust padding for smaller screens */
+		font-size: 14px; /* Reduce font size for better fit */
+	}
+}
+
+.Main-txt {
+	position: relative;
+	z-index: 99;
+	color: white;
+}
+.Main-txt::after {
+	content: " ";
+	position: absolute;
+	left: 25%;
+	bottom: 0;
+	display: block;
+	background-color: gold;
+	width: 50%;
+	height: 0.5em;
+	z-index: -1;
+}
+
+.stars-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.stars-container::before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	background-image: radial-gradient(white 1px, transparent 1px),
+		radial-gradient(white 1px, transparent 1px);
+	background-size: 50px 50px;
+	background-position: 0 0, 25px 25px;
+	animation: twinkling 20s linear infinite;
+	opacity: 0.2;
+}
+
+.team-nav {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+}
+
+.team-nav-btn {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: white;
+	padding: 0.5rem 1.5rem;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.team-nav-btn:hover,
+.team-nav-btn.active {
+	background: rgba(255, 215, 0, 0.2);
+	border-color: #ffd700;
+	transform: translateY(-2px);
+}
+
+.star-card {
+	height: 400px;
+	perspective: 1000px;
+	cursor: pointer;
+}
+
+.star-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.star-card:hover .star-card-inner {
+	transform: rotateY(180deg);
+}
+
+.star-card-front,
+.star-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.star-card-back {
+	transform: rotateY(180deg);
+	background: rgba(255, 215, 0, 0.05);
+	position: relative;
+	overflow: hidden;
+}
+
+.star-card-back::before {
+	content: "★";
+	position: absolute;
+	font-size: 200px;
+	opacity: 0.1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #ffd700;
+	z-index: 0;
+}
+
+.star-image-container {
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+
+.star-image {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #ffd700;
+	transition: transform 0.3s ease;
+}
+
+.star-image:hover {
+	transform: scale(1.05);
+}
+
+.star-team-badge {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: linear-gradient(45deg, #ffd700, #ffa500);
+	color: #000;
+	padding: 0.5rem 1.5rem;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 0.9rem;
+	white-space: nowrap;
+	box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.star-name {
+	color: #ffd700;
+	font-weight: bold;
+	/* margin-top: 1rem; */
+	text-align: center;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.back-content {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.quote-section {
+	text-align: center;
+	/* margin-bottom: 1rem; */
+}
+
+.quote-icon {
+	font-size: 2rem;
+	color: #ffd700;
+	opacity: 0.5;
+	margin-bottom: 0.5rem;
+}
+
+.quote {
+	font-style: italic;
+	text-align: center;
+	color: #ffd700;
+	font-size: 1.1rem;
+	line-height: 1.4;
+	margin: 0;
+	position: relative;
+	padding: 0 1rem;
+}
+
+.achievements-section {
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.achievements-title {
+	color: #ffd700;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0.8rem;
+	text-align: center;
+}
+
+.achievements {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.achievement-badge {
+	background: linear-gradient(45deg, #ffd700, #ffa500);
+	color: #000;
+	font-size: 0.8rem;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	font-weight: 500;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.achievement-badge:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes twinkling {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-50%);
+	}
+}
+
+.star-role {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+.impact-number {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #ffd700;
+	text-align: center;
+	/* margin: 0.5rem 0; */
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.impact-label {
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+	.Main-txt::after {
+		content: " ";
+		position: absolute;
+		left: 16%;
+		bottom: 0;
+		display: block;
+		background-color: gold;
+		width: 69%;
+		height: 0.5em;
+		z-index: -1;
+	}
+}
